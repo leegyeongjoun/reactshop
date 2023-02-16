@@ -1,0 +1,9 @@
+.checkout_left{
+    display: flex;
+
+}
+.checkout_ad{
+    flex-basis: 20%;
+    height: 168px;
+    margin-bottom: 10px;
+}

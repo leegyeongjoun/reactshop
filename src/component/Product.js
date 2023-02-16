@@ -17,9 +17,9 @@ function Product({id, title, image, price, rating}) {
                     {
                         // rating안의 크기만큼의 Array가 생성되는데, 이건 [] 이런배열이 생성됨 fill메소드에 의해 채워지는데{undefined,undefined,undefined,undefined,undefined} map함수는 새로운 배열을 반복해서 만들어준다.undefined를 안에 내용을 바꿔줌
                         
-                        Array(rating)
+                        Array(rating)//rating의 값이 정수여야함
                             .fill()
-                            .map(() => (
+                            .map((_,i) => (
                                 <p>⭐</p>
                             ))
                     }
