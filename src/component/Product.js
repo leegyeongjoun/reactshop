@@ -1,8 +1,27 @@
 import React from 'react';
 import '../css/Product.css'
-
+import { useStateValue } from './StateProvider';
 // 상위컴포넌트에서 자식컴포넌트로 정보를 주는 것
 function Product({id, title, image, price, rating}) {
+    // {basket} 정보를 받음, dispatch 정보를 쏨
+    const[{ basket }, dispatch] = useStateValue();
+const addToBasket = () => {
+    // 우리가 할 행동을 쏴줌
+    // action과 같음
+    // Reducer에 쏴 줌 switch로 ADD_TO_BASKET 확인을 함 return 시작
+    dispatch({
+        type:"ADD_TO_BASKET",
+        item:{//명목들 : 데이터들
+            id:id,
+            title:title,
+            image:image,
+            price:price,
+            rating:rating,
+        },
+    })
+};
+
+console.log("장바구니 확인", basket);
     return (
         <div className='product'>
             <div className="product_info">
@@ -26,8 +45,8 @@ function Product({id, title, image, price, rating}) {
                 </div>
             </div>
             <img src={image} alt="" />
-            <button>장바구니 담기</button>
-            {/* https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjOse1WeE5_v3-mmrtniFgXWmkHoy6khvDDer_oN8tP7RH8wmg_-obLD_UsnEeRxdD-Kk&usqp=CAU */}
+            <button onClick={addToBasket}>장바구니 담기</button>
+          
         </div>
     );
 }

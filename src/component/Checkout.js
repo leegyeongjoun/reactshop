@@ -1,15 +1,24 @@
 import React from 'react';
 import '../css/Checkout.css'
+import SubTotal from './SubTotal';
 
 function Checkout() {
     return (
         <div className='checkout'>
             <div className='checkout_left'>
-                <img className='checkout_ad' src="images/justdoit5.png" alt="광고1" />
-                <img className='checkout_ad' src="images/justdoit3.png" alt="광고2" />
-                <img className='checkout_ad' src="images/nike.png" alt="광고" />
-                <img className='checkout_ad' src="images/justdoit2.png" alt="광고" />
-                <img className='checkout_ad' src="images/justdoit4.png" alt="광고" />
+                <img className='checkout_ad' src="images/checkoutad.png" alt="광고" />
+                <div>
+                    <h2 className='checkout_title'>
+                        장바구니입니다.
+                    </h2>
+                    {/* 장바구니아이템들 */}
+                    {/* 장바구니아이템들 */}
+                    {/* 장바구니아이템들 */}
+                    {/* 장바구니아이템들 */}
+                </div>
+            </div>
+            <div className='checkout_right'>
+                <SubTotal />
             </div>
         </div>
     );
