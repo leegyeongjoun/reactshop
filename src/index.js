@@ -10,8 +10,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   //StrictMode란 리액트에서 정해진 자바스크립트 어느 단계 이상에서 가능
   <React.StrictMode>
-    <StateProvider initialState={initialState} reducer={reducer} />
+    <StateProvider initialState={initialState} reducer={reducer}>
   <App />
+    </StateProvider>
   </React.StrictMode>
 );
 

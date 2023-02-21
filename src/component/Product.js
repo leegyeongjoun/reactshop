@@ -4,12 +4,12 @@ import { useStateValue } from './StateProvider';
 // 상위컴포넌트에서 자식컴포넌트로 정보를 주는 것
 function Product({id, title, image, price, rating}) {
     // {basket} 정보를 받음, dispatch 정보를 쏨
-    const[{ basket }, dispatch] = useStateValue();
+    const [{ basket }, dispatch] = useStateValue();
 const addToBasket = () => {
     // 우리가 할 행동을 쏴줌
     // action과 같음
     // Reducer에 쏴 줌 switch로 ADD_TO_BASKET 확인을 함 return 시작
-    dispatch({
+    dispatch( {
         type:"ADD_TO_BASKET",
         item:{//명목들 : 데이터들
             id:id,
@@ -18,7 +18,7 @@ const addToBasket = () => {
             price:price,
             rating:rating,
         },
-    })
+    });
 };
 
 console.log("장바구니 확인", basket);

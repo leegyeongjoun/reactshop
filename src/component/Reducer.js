@@ -4,6 +4,7 @@ export const initialState = {//초창기 처음상태
 //Reducer는 장바구니 담기같은 행동을 dispatch해준다. 컴포넌트가 데이터 레이어로 도달하는걸 디스패치라고 함 도달하면 해당 케이스에 맞는 state와 action을 추가시켜 줌
 //state는 현재상태가 action에 따라 달라짐
 const reducer = (state, action) => {
+
     switch (action.type) {
         case 'ADD_TO_BASKET':
             return {

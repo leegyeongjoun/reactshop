@@ -1,16 +1,17 @@
-import { createContext, useContext, useReducer } from "react"
+import React, {createContext, useContext, useReducer} from "react";
     // context를 만들어서 statecontext에 넣을것
     // 데이터 레이어를 만든다.
-export const StateContext = createContext();
+    export const StateContext = createContext();
 
 
 
 // 앱을 래핑하고, 데이터 레이어를 제공한다
-export const StateProvider = ({reducer, inintalState, children}) =>(
-    <StateContext.Provider value={useReducer(reducer, inintalState)}>
+export const StateProvider = ({ reducer, initialState, children}) => (
+    <StateContext.Provider value={useReducer(reducer, initialState)}>
         {children}
     </StateContext.Provider>
 );
+
 
 //데이터 레이어로부터 정보룰 가져오는 메소드 설정
 // 매개체역할
