@@ -43,7 +43,7 @@ const reducer = (state, action) => {
                 let newBasket = [...state.basket];
 
                 if(index >= 0){
-                    // splice는 제거를 시작 할 인덱스, 몇개를 제거할것인가 newBasket로 정의 한거에 원본 배열을 지워준다. 그 후 그대로 반환하고 변경된 정보를 return값에 넣어줘야한다.
+                    // splice는 (제거를 시작 할 인덱스, 몇개를 제거할것인가) newBasket로 정의 한거에 원본 배열을 지워준다. 그 후 그대로 반환하고 변경된 정보를 return값에 넣어줘야한다.
                     newBasket.splice(index, 1)
                 }else{
                     console.warn(
