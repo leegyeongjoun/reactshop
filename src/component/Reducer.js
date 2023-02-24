@@ -1,5 +1,6 @@
 export const initialState = {//초창기 처음상태
     basket: [],//빈내용물
+    user:null
 };
 //장바구니 총합
 //reduce가 하는일에대한 결론 basket에 있는 item의 price를 0부터 시작해서 다 더하고 하나의 값을 반환하는 것
@@ -55,6 +56,15 @@ const reducer = (state, action) => {
                     ...state,
                     basket: newBasket
                 }
+                // SET_USER 타입과authUser를 쏴준것이 action
+                //  SET_USER 까지오고 반환하는 것은 맨위에 user:null을 authUser정보를 넣어줄 것이다.
+                case "SET_USER":
+                    return {
+                        ...state,
+                        user: action.user
+                    }
+
+
             default:
                 return state;
     }

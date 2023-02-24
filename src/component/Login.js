@@ -1,13 +1,20 @@
 import React, { useState } from 'react';
 import '../css/Login.css'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { auth } from '../firebase';
 function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const navigate = useNavigate();
 
     const signIn = e => {
         e.preventDefault();
+        // firebase에 있는 서버와 연동해서 맞으면 연동
+        auth.signInWithEmailAndPassword(email, password)
+            .then(auth => {
+                navigate('/')
+            })
+            .catch(error=> alert(error.message))
     }
 
     const register = e => {
@@ -16,9 +23,12 @@ function Login() {
         // firebase에서 제공함
         auth.createUserWithEmailAndPassword(email, password)
         .then((auth) => {
-            console.log(auth);
+            // console.log(auth);
+            if(auth){
+                navigate('/')
+            }
         })
-        .catch(error=> alert(error.message()))
+        .catch(error=> alert(error.message))
     }
     return (
         <div className='login'>
