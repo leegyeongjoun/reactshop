@@ -1,5 +1,5 @@
 .header{
-    height: 60px;
+    height: 70px;
     display: flex;
     align-items: center;
     background-color: black;
@@ -13,7 +13,7 @@
     /* 이미지의 크기를 맞춰주기 위해서 */
     object-fit: contain;
     margin: 0 20px;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 .header_searchInput{
     height: 12px;

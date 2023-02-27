@@ -13,6 +13,8 @@
 }
 .product_rating{
     display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
 .product > img{
     max-height: 200px;
@@ -21,16 +23,26 @@
     margin-bottom: 15px;
 }
 .product > button{
+    width: 200px;
+    height: 30px;
     background-color: #fff;
     border: 1px solid ;
     margin-top: 10px;
     border-color: black;
     border-radius: 5px;
+    transition: .3s;
+}
+.product > button:hover{
+    background-color: black;
+    color: white;
 }
 .product_price{
     margin-top: 10px;
 }
 .product_info{
     height: 100px;
-    margin-bottom: 15px;
+    margin-bottom: 24px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
 }

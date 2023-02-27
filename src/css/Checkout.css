@@ -18,9 +18,7 @@
 }
 .checkProductFlex{
     display: flex;
-}
-.checkProductFlex div{
-    flex-basis: 33.333%;
+    flex-direction: column;
 }
 .checkout_ad{
     width: 100%;

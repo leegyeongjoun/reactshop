@@ -1,13 +1,12 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link,  } from 'react-router-dom';
 import CheckoutProduct from './CheckoutProduct';
 import { useStateValue } from './StateProvider';
 import '../css/Pay.css'
 function Pay() {
-    const [{basket, user}, dispatch]= useStateValue();
-    const naviagte = useNavigate();
+    const [{basket, user}]= useStateValue();
     return (
-        <div className='paymeny'>
+        <div className='payment'>
             <div className="payment_container">
                 <Link to={'/checkout'} className="checkoutlink">
                     <h1>장바구니로 돌아가기 ({basket?.length}개의 상품 목록이 존재합니다.)</h1>

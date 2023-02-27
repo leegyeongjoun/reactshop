@@ -35,20 +35,26 @@
 }
 
 .login_signInButton{
-    background: #61dafb;
+    background: white;
+    color: black;
     border-radius: 2px;
     width: 100%;
     height: 30px;
     border:1px solid;
     margin-top: 10px;
-    border-color: #61dafb #f3f3f3 #a5a5f3;
+    transition: .3s;
+}
+.login_signInButton:hover{
+    background: black;
+    color: white;
 }
 .login_registerButton{
-    background: #61dafb;
+    background: black;
+    color: white;
     border-radius: 2px;
     width: 100%;
     height: 30px;
     border:1px solid;
     margin-top: 10px;
-    border-color: #b6c3e2;
+    transition: .3s;
 }

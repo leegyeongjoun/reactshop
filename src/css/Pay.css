@@ -22,14 +22,15 @@
 }
 
 .payment_title {
-    flex: 0.2; 
+    flex: 0.3; 
     /* flex 공간에서 1/5를 차지함 */
+    text-align: center;
 }
 
 /* 0.2라는 것은 부모 콘테이너에서 title열이 20퍼만 자리를 차지 해라 */
 
 .payment_address, .payment_items, .payment_details {
-    flex: 0.8;
+    flex: 0.7 1;
 }
 
 

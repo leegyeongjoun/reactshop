@@ -1,12 +1,13 @@
 .subtotal{
     display: flex;
     flex-direction: column;
-    width: 500px;
-    height: 100px;
+    width: 1080px;
+    height: 70px;
     padding: 20px;
     background-color: #f3f3f3;
     border: 1px solid #dddddd;
     border-radius: 3px;
+    margin: 0 auto;
 }
 .subtotal_gift{
     display: flex;
@@ -18,14 +19,18 @@
 .subtotal > button{
     background-color: #fff;
     border-radius: 2px;
-    width: 100%;
+    width: 500px;
     height: 30px;
     border: 1px solid;
-    margin-top: 15px;
     transition: .2s;
     color: #111;
+    margin: 20px auto;
 }
 .subtotal > button:hover{
     background-color: black;
     color: white;
+}
+.mgauto{
+    margin: 0 auto;
+    
 }

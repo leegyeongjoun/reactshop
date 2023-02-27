@@ -13,13 +13,12 @@ function SubTotal() {
             <CurrencyFormat 
             renderText={(value )=> (
                 <>
-                <p>
+                <p className='mgauto'>
 
                     총액 ({basket.length} items) : <strong> {value} 원</strong>
                 </p>
 
                     <small className='subtotal_gift'>
-                        <input type="checkbox" /> 체크박스입니다.
                     </small>
                 </>
             )}
